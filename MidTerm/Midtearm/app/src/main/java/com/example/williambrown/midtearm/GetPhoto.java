@@ -54,6 +54,7 @@ public class GetPhoto extends AsyncTask<String, Void, Bitmap>{
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
+            url.closeConnection();
             return image;
         }
     }
